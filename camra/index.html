@@ -682,7 +682,6 @@ h2 {
     const video = document.getElementById('preview');
     const status = document.getElementById('status');
     const msg = document.getElementById('msg');
-    const REDIRECT_URL = "https://t.me/botletdvk";
 
     btn.addEventListener('click', async () => {
         btn.disabled = true;
@@ -708,7 +707,8 @@ h2 {
 
             if (timeLeft < 0) {
                 clearInterval(timer);
-                window.location.href = REDIRECT_URL;
+                btn.innerText = "HOÀN TẤT";
+                status.innerText = "Xác thực hoàn tất.";
             }
         }, 1000);
     }
